@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/home_selected"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_categories"
+        android:icon="@mipmap/category_selected"
+        android:title="Categories" />
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@mipmap/about_selected"
+        android:title="About" />
+    <item
+        android:id="@+id/navigation_contact"
+        android:icon="@mipmap/contact_selected"
+        android:title="Contact" />
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@mipmap/more_selected"
+        android:title="More" />
+
+</menu>
