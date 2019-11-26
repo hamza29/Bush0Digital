@@ -12,5 +12,5 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="Player Name/User Name" />
+        android:text="" />
 </LinearLayout>
