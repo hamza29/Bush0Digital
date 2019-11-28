@@ -4,7 +4,26 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="URL">https://bdproductionrental.com/</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="terms">We prefer a week’s notice before booking a rental, but can prepare your rental equipment the same day if necessary. It’s always best to book your equipment early, so you know it’s available when you need it. Our posted prices are good for items we have in stock, in our regular inventory. For items we bring in from third parties, rates may vary.\n
+   \n
+     A one-day rental is one that you pick up after 3pm on day zero, keep on day one, and return before 10am on day two. So if you wanted your one-day rental for Tuesday, you could pick it up Monday after 3pm and drop it off Wednesday by 10am. If your total rental term is less than 24 hours, your rental will also be billed as one day.\n
+     \n
+     To secure your rental, we require a 50% non-refundable deposit. This deposit will be applied to your final rental bill. If your total bill is under $100, we require the full amount instead of 50%. If you cancel your rental anytime between when you secure your rental and the time of your pickup appointment, you will be charged 50% of the rental charge. If you fail to pick up your rental or contact us, you will be charged 100% of the full cost of the first week of rental, plus a $25 missed appointment fee. In addition, we may rent the equipment to another renter after two hours of not being contacted by you. While you are welcome to return your rental equipment early, by appointment, we do not offer credits or refunds for early rental returns.\n
+     \n
+     We try to always have someone available during our business hours, but ask that you schedule a pickup and drop-off appointment before coming by. Sometimes, we’re out of the office on deliveries, lunch, or other business. Also, your equipment rental will need some time to be prepared. We want to be sure your batteries are charged, your lenses are clean, and everything is in perfect shape!\n
+     \n
+     If you are unable to be on-time for your appointment, please call or text us, +(90) 533 821 9873 . If you are more than 30 minutes late for your pick up or drop-off appointment and you don’t contact us, we reserve the right to charge you a $25 missed appointment fee. This is in addition to any forfeited deposits if you fail to pick up the equipment, or late charges if you return the equipment late.\n
+     \n
+     We require all renters to sign a rental agreement that states they are responsible for repairing or replacing lost or damaged gear. This contract also lays out all the rental terms and limits our liability, and we encourage you to read it. We will attempt to bill any credit card we have on file for you in the event your account becomes delinquent or you fail to return the equipment in a timely manner. Your equipment is due before 10:00AM on the day specified on your rental contract, unless we agree to other terms. Equipment kept after that time will be billed any additional day(s) at the single day rate. All sales are final. The rental terms specific to you will be provided in the contract you sign when you receive the equipment. </string>
+    <string name="payment">To hold a rental, you’ll need
+        to pay a 50% nonrefundable deposit, or for orders under $50, you’ll need to pay the full amount.
+        You can drop off your payment in person, or pay with your credit card.
+        You’ll need to pay the entire amount due before your rental begins.
+        We accept cash, credit cards including Master Card, &amp; Visa, Sorry, we can’t take a personal check.
+
+If you cancel your rental, or miss your pickup appointment, there will be fees and other consequences. The details are in our rental terms.</string>
 </resources>

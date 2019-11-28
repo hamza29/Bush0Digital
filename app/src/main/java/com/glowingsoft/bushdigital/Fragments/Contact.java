@@ -1,6 +1,7 @@
 package com.glowingsoft.bushdigital.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -9,15 +10,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.glowingsoft.bushdigital.R;
 
 public class Contact extends Fragment {
+    LinearLayout callLinear;
 
     public Contact() {
         // Required empty public constructor
     }
-
 
 
     @Override
@@ -30,9 +32,19 @@ public class Contact extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+        callLinear = view.findViewById(R.id.call);
+        callLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String uri = "tel:+905338219873"  ;
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(uri));
+                startActivity(intent);
+            }
+        });
+        return view;
     }
-
 
 
     @Override

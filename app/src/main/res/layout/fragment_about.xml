@@ -1,14 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.About">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-</FrameLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/logowhite"
+                    android:foregroundGravity="center" />
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@mipmap/search"
+                    android:foregroundGravity="right" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"            android:textStyle="bold"
+
+            android:text="About Bush Digital Production Rental"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            />
+
+        <TextView
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="Bus Digital Production Rental was founded by Mr.Uchenna Okafor in 2017, to meet the needs of small and medium-budget video productions in Cyprus.
+
+\n \nAs a video and film production rental company, we provide the equipment  and knowledge to get great video,whether your project is destined for TV,the internet,film festivals,or you're just sharing it with friends. We rent several professional DSLR cameras and nearly enough lenses,lights to give you the perfect options for any project. Our equipment rentals service features lighting package,as well as cameras,lenses,dollies,jibs tripods,sandbags and much, much more."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -29,9 +29,10 @@
                     android:id="@+id/back"
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:layout_alignParentStart="true"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/_5sdp"
                     android:background="@mipmap/back_btn"
-                    android:visibility="gone" />
+                    android:foregroundGravity="" />
 
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
@@ -42,33 +43,39 @@
                     android:background="@mipmap/logowhite"
                     android:foregroundGravity="center" />
 
-                <ImageView
-                    android:id="@+id/search"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="end"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@mipmap/search"
-                    android:foregroundGravity="right" />
 
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/colorPrimary"
-            app:tabIndicatorHeight="@dimen/_2sdp"
-            app:tabSelectedTextColor="@color/colorPrimary" />
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Rental Payment Policy"
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/frameLayout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/mainBackColor" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/terms"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+</ScrollView>
 
     </LinearLayout>
 

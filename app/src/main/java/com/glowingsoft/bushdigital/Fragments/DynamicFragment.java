@@ -1,5 +1,6 @@
 package com.glowingsoft.bushdigital.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,10 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.glowingsoft.bushdigital.CategoriesModel;
 import com.glowingsoft.bushdigital.CategoryModelLocal;
 import com.glowingsoft.bushdigital.CategoryModelMainList;
+import com.glowingsoft.bushdigital.MainActivity;
 import com.glowingsoft.bushdigital.MyApp;
 import com.glowingsoft.bushdigital.R;
 import com.glowingsoft.bushdigital.SplashScreenActivity;
-import com.glowingsoft.bushdigital.VideoAdapter;
 import com.squareup.picasso.Picasso;
 
 import net.idik.lib.slimadapter.SlimAdapter;
@@ -41,7 +42,6 @@ public class DynamicFragment extends Fragment {
     Box<CategoryModelMainList> categoryModelMainListBox;
     SlimAdapter slimAdapter;
     RecyclerView list;
-    VideoAdapter videoAdapter;
 
     public static DynamicFragment newInstance(String val) {
         DynamicFragment fragment = new DynamicFragment();
@@ -82,15 +82,6 @@ public class DynamicFragment extends Fragment {
         categorysublist = categoryModelLocalBox.getAll();
         categoriesModels = siteModelBox.getAll();
 
-//                for (int k = 0; k < categorysublist.size(); k++) {
-//                    if (node.equalsIgnoreCase(categorysublist.get(k).getCategory())) {
-        categoryModelLocals = categorysublist;
-//                        break;
-//
-//                    }
-//
-//
-//        }
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         list.setLayoutManager(linearLayoutManager);
         slimAdapter = SlimAdapter.create()
@@ -106,11 +97,24 @@ public class DynamicFragment extends Fragment {
                                     Picasso.get().load(data.getImage()).into((ImageView) view);
                                 }
                             });
+                            Log.e("TGED", "one" + data.getPOne());
+
+                            injector.clicked(R.id.product_more, new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                                    intent.putExtra("product_name", data.getTitle());
+                                    intent.putExtra("product_des", data.getDescription());
+                                    intent.putExtra("product_image", data.getImage());
+                                    intent.putExtra("Ones", "$ "+ data.getPOne()+" for 1 Day");
+                                    intent.putExtra("Twos", "$ "+data.getPTwo()+" for 2 Day");
+                                    intent.putExtra("Threes","$ "+ data.getPThree()+" for 3 Day");
+                                    startActivity(intent);
+                                }
+                            });
                         }
                     }
-                })
-
-                .attachTo(list).updateData(categoryModelLocals);
+                }).attachTo(list).updateData(categorysublist);
 
 
         return view;

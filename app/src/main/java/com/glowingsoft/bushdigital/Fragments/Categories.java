@@ -1,6 +1,7 @@
 package com.glowingsoft.bushdigital.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -12,9 +13,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.glowingsoft.bushdigital.CategoriesModel;
+import com.glowingsoft.bushdigital.CategoryModelLocal;
+import com.glowingsoft.bushdigital.CategorySearchActivity;
 import com.glowingsoft.bushdigital.MyApp;
 import com.glowingsoft.bushdigital.PlansPagerAdapter;
 import com.glowingsoft.bushdigital.R;
@@ -30,36 +34,40 @@ public class Categories extends Fragment {
     ViewPager viewPager;
     ArrayList<String> tabTitle = new ArrayList<>();
     Box<CategoriesModel> siteModelBox;
+    ImageView Search;
 
     public Categories() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    ArrayList<String> category = new ArrayList<>();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_categories, container, false);
         tab = view.findViewById(R.id.tabs);
+        Search = view.findViewById(R.id.search);
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CategorySearchActivity.class);
+                startActivity(intent);
+            }
+        });
         viewPager = view.findViewById(R.id.frameLayout);
         siteModelBox = ((MyApp) Objects.requireNonNull(getActivity()).getApplication())
                 .getBoxStore()
                 .boxFor(CategoriesModel.class);
+
         tabTitle.clear();
-
-
-//        Log.e("TGED", "SIZE" + siteModelBox.getAll());
         for (int i = 0; i < siteModelBox.getAll().size(); i++) {
             tab.addTab(tab.newTab().setText("" + siteModelBox.getAll().get(i).getTitle()));
-            tabTitle.add(siteModelBox.getAll().get(i).getTitle());
 
+            tabTitle.add(siteModelBox.getAll().get(i).getTitle());
         }
 
         tab.setTabGravity(TabLayout.GRAVITY_CENTER);

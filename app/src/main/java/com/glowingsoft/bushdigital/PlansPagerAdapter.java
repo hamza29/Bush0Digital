@@ -20,9 +20,7 @@ public class PlansPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
         return new DynamicFragment().newInstance(tabTitle.get(position));
-
     }
 
     @Override
